@@ -20,8 +20,7 @@ module "azure_vnet" {
   vnet_cidr               = ["10.120.0.0/23", "10.120.2.0/24"]
   subnet_service_endpoint = ["Microsoft.AzureCosmosDB", "Microsoft.KeyVault"]
   nva_ip                  = "10.120.64.13"
-  transit_vnet            = "PROD_VNET"
-  transit_vnet_id         = "/subscriptions/9258877224884/resourceGroups/Networking-Transit/providers/Microsoft.Network/virtualNetworks/"
+  transit_vnet_id         = "/subscriptions/9258877224884/resourceGroups/Networking-Transit/providers/Microsoft.Network/virtualNetworks/prod-transit-vnet"
   custom_vnet             = true
   pvt_link_policy         = false
   front_door_routing      = false
