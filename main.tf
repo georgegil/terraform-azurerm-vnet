@@ -26,7 +26,7 @@ resource "azurerm_virtual_network_peering" "hub_peer" {
   name                         = "${local.vnet_prefix}-transit-link"
   resource_group_name          = var.rg_name
   virtual_network_name         = azurerm_virtual_network.az_vnet.name
-  remote_virtual_network_id    = "${var.transit_vnet_id}${var.transit_vnet}"
+  remote_virtual_network_id    = var.transit_vnet_id
   allow_forwarded_traffic      = true
   allow_gateway_transit        = false
   allow_virtual_network_access = true

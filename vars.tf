@@ -42,15 +42,9 @@ variable "nva_ip" {
   default     = null
 }
 
-variable "transit_vnet" {
-  description = "The name of the transit VNET of the remote network this VNET will be connected to. The use case for this will be the Transit VNET."
-  type        = string
-}
-
 variable "transit_vnet_id" {
   description = "The ID of the VNET, except for the VNET name. The default value should be used unless a rare exception."
   type        = string
-  default     = "/subscriptions/9916d0f7-a2fd-48f2-b38b-d12e90ed9309/resourceGroups/Networking-Transit/providers/Microsoft.Network/virtualNetworks/"
 }
 
 variable "custom_vnet" {
